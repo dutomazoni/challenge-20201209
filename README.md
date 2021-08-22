@@ -54,7 +54,7 @@ O mesmo acontece quando um usuário é deletado.
 
 ## Rotas
 
-Informações mais detalhadas das rotas no [swagger](API/Routes/swagger.yaml).
+Informações mais detalhadas das rotas no [swagger](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/dutomazoni/challenge-20201209/master/API/Routes/swagger.yaml).
 
 ## Testes das rotas
 
