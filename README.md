@@ -26,31 +26,31 @@ E depois no **front**:
     $ yarn start
 
 A aplicação tem somente uma página, onde pode-se realizar a busca por nome ou nacionalidade de usuário, ordenar a tabela por nome ou gênero e ainda editar ou excluir um usuário clicando no botão da coluna Actions.
-![](./frontend/src/styles/images/pagina_inicial.png)
+![pag_inicial](/frontend/src/styles/images/pagina_inicial.png)
 
 O resultado de uma busca é mostrado como a imagem, tanto por nome quanto por nacionalidade:
 
-![](./frontend/src/styles/images/busca_por_nome_result.png)
+![busca_por_nome_result](/frontend/src/styles/images/busca_por_nome_result.png)
 
 Se tentarmos carregar mais usuários com o nome buscado, receberemos um aviso que todos os usuários já foram encontrados.
 
-![](./frontend/src/styles/images/busca_por_nome_users_found.png)
+![busca_por_nome_found](/frontend/src/styles/images/busca_por_nome_users_found.png)
 
 Clicando no botão ao lado da lupa de busca, a busca é resetada. Caso seja feita uma busca com um parâmetro não existente, recebemos um aviso:
 
-![](./frontend/src/styles/images/busca_por_nat_not_found.png)
+![busca_por_nat](/frontend/src/styles/images/busca_por_nat_not_found.png)
 
 Clicando no botão de informações do usuário, é mostrada a tela para editar seus dados ou deletar.
 
-![](./frontend/src/styles/images/user_info.png)
+![user_info](/frontend/src/styles/images/user_info.png)
 
 Editando um campo e salvando, é dado um aviso de edição realizada com sucesso e a tabela é atualizada.
 
-![](./frontend/src/styles/images/user_edit.png)
+![user_edit](/frontend/src/styles/images/user_edit.png)
 
 O mesmo acontece quando um usuário é deletado.
 
-![](./frontend/src/styles/images/user_delete.png)
+![user_delete](/frontend/src/styles/images/user_delete.png)
 
 ## Rotas
 
