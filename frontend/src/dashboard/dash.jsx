@@ -45,10 +45,10 @@ export default () => {
     let [isLoading, updateLoading] = useState(true)
     let [sortingName, updateSortingName] = useState('asc')
     let [sortingGender, updateSortingGender] = useState('asc')
-
+    let base_url = process.env.REACT_APP_API_URL || 'http://localhost:5001';
     const getList =  async (parameter) => {
         axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-        await axios.get(process.env.REACT_APP_API_URL + "/users?from=" + parameter)
+        await axios.get(base_url + "/users?from=" + parameter)
             .then((response) => {
                 setUsers([...users, ...response.data.users])
                 if (users === undefined) {
@@ -61,7 +61,7 @@ export default () => {
 
     const getUser =  async (parameter) => {
         axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-        await axios.get(process.env.REACT_APP_API_URL + "/users/" + parameter)
+        await axios.get(base_url + "/users/" + parameter)
             .then((response) => {
                 setUser(response.data.user)
             })
@@ -69,7 +69,7 @@ export default () => {
 
     const searchUser =  async (content) => {
         axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-        await axios.post(process.env.REACT_APP_API_URL + "/search_user/", content)
+        await axios.post(base_url + "/search_user/", content)
             .then((response) => {
                 toast.info('Searching for users!')
                 console.log(response.statusText)
@@ -80,14 +80,14 @@ export default () => {
 
     const deleteUser =  async (parameter) => {
         axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-        await axios.delete(process.env.REACT_APP_API_URL + "/users/" + parameter)
+        await axios.delete(base_url + "/users/" + parameter)
             .then((response) => {
             })
     }
 
     const editUser =  async (user_id, content) => {
         axios.defaults.headers['Access-Control-Allow-Origin'] = '*';
-        await axios.put(process.env.REACT_APP_API_URL + "/users/" + user_id, content)
+        await axios.put(base_url + "/users/" + user_id, content)
             .then((response) => {
             })
     }

@@ -22,10 +22,10 @@ app.use((req, res, next) => {
 
 let mongoDb
 if (process.env.NODE_ENV === 'dev'){
-    mongoDb = process.env.URL
+    mongoDb = process.env.URL || 'mongodb+srv://teste:senhateste@cluster0.thb2w.mongodb.net/challenge_eduq?retryWrites=true&w=majority'
     port = process.env.DEV_PORT
 }else{
-    mongoDb = process.env.TEST_URL
+    mongoDb = process.env.TEST_URL || 'mongodb+srv://teste:senhateste@cluster0.thb2w.mongodb.net/challenge_eduq_test?retryWrites=true&w=majority'
     port = process.env.TEST_PORT
 }
 
