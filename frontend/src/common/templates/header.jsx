@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/scss/header.scss'
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
 import ApartmentIcon from '@material-ui/icons/Apartment';
 import {AppBar, IconButton, Toolbar, Typography} from "@material-ui/core";

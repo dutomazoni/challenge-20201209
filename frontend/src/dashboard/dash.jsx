@@ -204,7 +204,7 @@ export default () => {
                 }}
             >
                 <Fade in={open}>
-                    <div style={{border: '2px solid black', width: '30%', height: '80%', background:"#532bc1"}}>
+                    <div style={{border: '2px solid black', width: 'auto', height: 'auto', background:"#532bc1"}}>
                         <form className={"form"} style={{margin:"1vw"}}>
                             <div style={{display: 'flex', direction: 'row', justifyContent: 'center', justifyItems:'center', marginBottom: '2vh'}}>
                                 <img src={props.picture.large}></img>
@@ -294,11 +294,11 @@ export default () => {
     return (
         <div>
             <ToastContainer limit={1}/>
-            <div style={{display: 'flex', marginTop: '4vh'}}>
-                <Input  placeholder=" Search here..." fullWidth={true} style={{margin:"1vw", fontSize: "1.5rem",color: '#21086d', background:'white'}} value={text} onChange={e => setText(e.target.value)}/>
-                <Button variant="contained" disableElevation style={{margin: '2vh auto', display:'flex', color: '#7ffff9', background:'#21086d'}} onClick={() => handleSearch(text, type)}> <SearchIcon/> </Button>
-                <Button variant={'contained'} disableElevation style={{margin: '2vh auto', display:'flex', color: '#7ffff9', background:'#21086d', marginLeft: '1vw'}}  onClick={initialState}> <HighlightOffIcon/> </Button>
-                <FormControl  row component="fieldset" fullWidth={true} style={{marginLeft: '3vw'}}>
+            <div style={{display: 'flex', marginTop: '2vh'}}>
+                <Input  placeholder=" Search here..." fullWidth={true}  style={{margin:"1vh", fontSize: "1.5rem",color: '#21086d', background:'white', height:'10vh'}} value={text} onChange={e => setText(e.target.value)}/>
+                <Button variant="contained" disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', height:'10vh'}} onClick={() => handleSearch(text, type)}> <SearchIcon/> </Button>
+                <Button variant={'contained'} disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', marginLeft: '1vw', height:'10vh'}}  onClick={initialState}> <HighlightOffIcon/> </Button>
+                <FormControl  row component="fieldset" fullWidth={true} style={{margin: '1vh'}}>
                     <FormLabel>Search Filter:</FormLabel>
                     <RadioGroup row value={type} onChange={e => setType(e.target.value)}>
                         <FormControlLabel value="name.first" control={<Radio />} label="First Name" />

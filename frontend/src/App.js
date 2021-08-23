@@ -9,7 +9,7 @@ import './styles/scss/App.scss'
 export default props => (
     <div>
       <Header />
-      <div className={'wrapper'}>
+      <div>
         <BrowserRouter>
           <Content/>
         </BrowserRouter>
