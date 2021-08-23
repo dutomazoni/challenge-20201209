@@ -1,5 +1,7 @@
 # Desafio Pharma Inc.
 
+O projeto está disponível no [Heroku](https://pharma-inc.herokuapp.com/).
+
 ## Instalação
 ##### OBS: todos os comandos são considerando a pasta root (challenge-202021209) como inicial.
 
