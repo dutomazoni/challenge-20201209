@@ -293,19 +293,19 @@ export default () => {
 
     return (
         <div>
-            <ToastContainer limit={1}/>
+            <ToastContainer autoClose={2000} />
             <div style={{display: 'flex', marginTop: '2vh'}}>
                 <Input  placeholder=" Search here..." fullWidth={true}  style={{margin:"1vh", fontSize: "1.5rem",color: '#21086d', background:'white', height:'10vh'}} value={text} onChange={e => setText(e.target.value)}/>
                 <Button variant="contained" disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', height:'10vh'}} onClick={() => handleSearch(text, type)}> <SearchIcon/> </Button>
-                <Button variant={'contained'} disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', marginLeft: '1vw', height:'10vh'}}  onClick={initialState}> <HighlightOffIcon/> </Button>
-                <FormControl  row component="fieldset" fullWidth={true} style={{margin: '1vh'}}>
-                    <FormLabel>Search Filter:</FormLabel>
-                    <RadioGroup row value={type} onChange={e => setType(e.target.value)}>
-                        <FormControlLabel value="name.first" control={<Radio />} label="First Name" />
-                        <FormControlLabel value="nat" control={<Radio />} label="Nationality" />
-                    </RadioGroup>
-                </FormControl>
+                <Button variant={'contained'} disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', height:'10vh'}}  onClick={initialState}> <HighlightOffIcon/> </Button>
             </div>
+            <FormControl row component="fieldset" fullWidth={true} style={{margin: '1vh', height:'100%'}}>
+                <FormLabel>Search Filter:</FormLabel>
+                <RadioGroup row value={type} onChange={e => setType(e.target.value)}>
+                    <FormControlLabel value="name.first" control={<Radio />} label="First Name" />
+                    <FormControlLabel value="nat" control={<Radio />} label="Nationality" />
+                </RadioGroup>
+            </FormControl>
 
             {isLoading ? <div><Spinner animation="border" variant={"info"}/></div> : userTable(users)}
             {open ? userInfo(user) : <div/>}

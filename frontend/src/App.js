@@ -5,15 +5,11 @@ import Content from './common/templates/content'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/scss/App.scss'
 
-
 export default props => (
     <div>
       <Header />
-      <div>
         <BrowserRouter>
           <Content/>
         </BrowserRouter>
-      </div>
-
     </div>
 )

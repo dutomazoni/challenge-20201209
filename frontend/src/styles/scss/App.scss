@@ -9,4 +9,9 @@ body {
   font-family: "Roboto", sans-serif;
   background: rgba(#532bc1, 0.5);
   display: flex;
+  respond(big-desktop-up) {}
+  respond(desktop-up) {}
+  respond(tablet-landscape-up) {}
+  respond(tablet-portrait-up) {}
+  respond(phone-only) {}
 }
