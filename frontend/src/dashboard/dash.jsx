@@ -294,10 +294,10 @@ export default () => {
     return (
         <div>
             <ToastContainer autoClose={2000} />
-            <div style={{display: 'flex', marginTop: '2vh'}}>
-                <Input  placeholder=" Search here..." fullWidth={true}  style={{margin:"1vh", fontSize: "1.5rem",color: '#21086d', background:'white', height:'10vh'}} value={text} onChange={e => setText(e.target.value)}/>
-                <Button variant="contained" disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', height:'10vh'}} onClick={() => handleSearch(text, type)}> <SearchIcon/> </Button>
-                <Button variant={'contained'} disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d', height:'10vh'}}  onClick={initialState}> <HighlightOffIcon/> </Button>
+            <div style={{display: 'flex', marginTop: '1vh'}}>
+                <Input  placeholder=" Search here..." fullWidth={true}  style={{margin:"1vh", fontSize: "1.5rem",color: '#21086d', background:'white'}} value={text} onChange={e => setText(e.target.value)}/>
+                <Button variant="contained" disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d'}} onClick={() => handleSearch(text, type)}> <SearchIcon/> </Button>
+                <Button variant={'contained'} disableElevation style={{margin: '1vh ', display:'flex', color: '#7ffff9', background:'#21086d'}}  onClick={initialState}> <HighlightOffIcon/> </Button>
             </div>
             <FormControl row component="fieldset" fullWidth={true} style={{margin: '1vh', height:'100%'}}>
                 <FormLabel>Search Filter:</FormLabel>
